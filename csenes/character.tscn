@@ -10,7 +10,15 @@ animations = [{
 "texture": ExtResource("1_ixfc8")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ixfc8")
+}],
+"loop": true,
+"name": &"Run",
 "speed": 5.0
 }]
 
@@ -24,8 +32,8 @@ script = ExtResource("1_c1skk")
 [node name="body" type="AnimatedSprite2D" parent="layouts"]
 scale = Vector2(0.75, 0.6875)
 sprite_frames = SubResource("SpriteFrames_ay8in")
-animation = &"idle"
-autoplay = "idle"
+animation = &"Idle"
+autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_cd1th")
@@ -33,4 +41,4 @@ shape = SubResource("CircleShape2D_cd1th")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.865, 1.865)
 position_smoothing_enabled = true
-position_smoothing_speed = 4.0
+position_smoothing_speed = 8.0
