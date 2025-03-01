@@ -44,6 +44,14 @@ D={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="tile"
+2d_physics/layer_2="tile_damage"
+2d_physics/layer_3="decals"
+2d_physics/layer_4="walls"
+2d_physics/layer_5="player"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

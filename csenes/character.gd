@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var anim = $layouts/body
 
 
-var speed = 200  
+var speed = 150
 
 func _physics_process(delta):
 	var direction = Input.get_vector("A", "D", "W", "S")

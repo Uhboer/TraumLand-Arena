@@ -1,8 +1,50 @@
-[gd_scene load_steps=2 format=3 uid="uid://bm1yd3t0b850i"]
+[gd_scene load_steps=5 format=4 uid="uid://bm1yd3t0b850i"]
 
 [ext_resource type="PackedScene" uid="uid://dkhchtxql8eyj" path="res://csenes/character.tscn" id="1_ylpdp"]
+[ext_resource type="Texture2D" uid="uid://c36rhcv4p8hkp" path="res://sprites/world/tileset1.png" id="2_6wq6b"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sagss"]
+texture = ExtResource("2_6wq6b")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_l3a65"]
+tile_size = Vector2i(32, 32)
+sources/1 = SubResource("TileSetAtlasSource_sagss")
 
 [node name="World" type="Node2D"]
+
+[node name="tilemap" type="TileMapLayer" parent="."]
+scale = Vector2(0.75, 0.75)
+tile_map_data = PackedByteArray("AAADAP//AQAAAAAAAAADAP7/AQAAAAAAAAAEAP//AQAAAAAAAAAEAP7/AQAAAAAAAAAFAP7/AQAAAAAAAAAFAP//AQAAAAAAAAADAAAAAQAAAAAAAAAEAAAAAQAAAAAAAAAFAAAAAQAAAAAAAAAEAP3/AQAAAAAAAAADAP3/AQAAAAAAAAAFAP3/AQAAAAAAAAAGAP3/AQAAAAAAAAAGAP7/AQAAAAAAAAAGAP//AQAAAAAAAAAGAAAAAQAAAAAAAAACAAAAAQACAAIAAAACAP//AQACAAIAAAACAP7/AQACAAIAAAACAP3/AQABAAIAAAAHAP3/AQABAAIAAAAHAP7/AQACAAIAAAAHAP//AQACAAIAAAAHAAAAAQACAAIAAAAHAAEAAQADAAIAADAGAAEAAQACAAIAAGAFAAEAAQACAAIAAGAEAAEAAQACAAIAAGADAAEAAQACAAIAAGACAAEAAQADAAIAAGAFAPv/AQAAAAIAAAD///z/AQAFAAEAAAD8//7/AQADAAEAAAD7//3/AQADAAEAAAD6//z/AQADAAEAAAD6//3/AQADAAEAAAD7//7/AQADAAEAAAD6/wAAAQACAAAAAAD7/wAAAQADAAAAAAD8/wAAAQAEAAAAAAD7/wEAAQAFAAAAAAD8/wEAAQAGAAAAAAD9/wEAAQAEAAEAAAD9/wAAAQAGAAEAAAA=")
+tile_set = SubResource("TileSet_l3a65")
 
 [node name="character" parent="." instance=ExtResource("1_ylpdp")]
 position = Vector2(17, 13)
