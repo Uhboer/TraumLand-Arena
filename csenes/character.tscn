@@ -1,7 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkhchtxql8eyj"]
+[gd_scene load_steps=9 format=3 uid="uid://dkhchtxql8eyj"]
 
 [ext_resource type="Script" uid="uid://c3oul8gs06q8g" path="res://csenes/character.gd" id="1_c1skk"]
-[ext_resource type="Texture2D" uid="uid://b5ajlkdi67d6e" path="res://sprites/humanity/human.png" id="1_ixfc8"]
+[ext_resource type="Texture2D" uid="uid://csvox47om0n43" path="res://sprites/humanity/head.png" id="2_8w61l"]
+[ext_resource type="Texture2D" uid="uid://bpnmtj6tfxqpr" path="res://sprites/humanity/l_arm.png" id="3_jnuea"]
+[ext_resource type="Texture2D" uid="uid://1vv6trlnfyyi" path="res://sprites/humanity/torso.png" id="4_vdj6j"]
+[ext_resource type="Texture2D" uid="uid://bgmmg7xq07xcr" path="res://sprites/humanity/r_leg.png" id="5_ouug3"]
+[ext_resource type="Texture2D" uid="uid://c2k6ypfy3mh0r" path="res://sprites/humanity/r_arm.png" id="6_ouug3"]
+[ext_resource type="Texture2D" uid="uid://b5rkht8osrlik" path="res://sprites/humanity/l_leg.png" id="7_ju4hu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cd1th"]
 radius = 22.0227
@@ -11,14 +16,41 @@ script = ExtResource("1_c1skk")
 
 [node name="layouts" type="Node2D" parent="."]
 
-[node name="human" type="Sprite2D" parent="layouts"]
-scale = Vector2(0.71875, 0.6875)
-texture = ExtResource("1_ixfc8")
+[node name="body" type="Sprite2D" parent="layouts"]
+
+[node name="Head" type="Sprite2D" parent="layouts/body"]
+position = Vector2(0, 1.19209e-07)
+scale = Vector2(0.6875, 0.6875)
+texture = ExtResource("2_8w61l")
+
+[node name="Torso" type="Sprite2D" parent="layouts/body"]
+position = Vector2(-7.62939e-06, 2.38419e-07)
+scale = Vector2(0.6875, 0.6875)
+texture = ExtResource("4_vdj6j")
+
+[node name="RLeg" type="Sprite2D" parent="layouts/body"]
+position = Vector2(0, -2.38419e-07)
+scale = Vector2(0.6875, 0.6875)
+texture = ExtResource("5_ouug3")
+
+[node name="RArm" type="Sprite2D" parent="layouts/body"]
+scale = Vector2(0.6875, 0.6875)
+texture = ExtResource("6_ouug3")
+
+[node name="LArm" type="Sprite2D" parent="layouts/body"]
+scale = Vector2(0.6875, 0.6875)
+texture = ExtResource("3_jnuea")
+
+[node name="LLeg" type="Sprite2D" parent="layouts/body"]
+position = Vector2(-3.8147e-06, -9.53674e-07)
+scale = Vector2(0.6875, 0.6875)
+texture = ExtResource("7_ju4hu")
 
 [node name="collider" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_cd1th")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
 zoom = Vector2(1.865, 1.865)
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
