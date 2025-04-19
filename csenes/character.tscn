@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dkhchtxql8eyj"]
+[gd_scene load_steps=10 format=3 uid="uid://dkhchtxql8eyj"]
 
-[ext_resource type="Script" uid="uid://c3oul8gs06q8g" path="res://csenes/character.gd" id="1_c1skk"]
+[ext_resource type="Script" uid="uid://c3oul8gs06q8g" path="res://scripts/character.gd" id="1_c1skk"]
+[ext_resource type="Script" uid="uid://dbbb8gsoerq1x" path="res://scripts/body.gd" id="2_3we25"]
 [ext_resource type="Texture2D" uid="uid://csvox47om0n43" path="res://sprites/humanity/head.png" id="2_8w61l"]
 [ext_resource type="Texture2D" uid="uid://bpnmtj6tfxqpr" path="res://sprites/humanity/l_arm.png" id="3_jnuea"]
 [ext_resource type="Texture2D" uid="uid://1vv6trlnfyyi" path="res://sprites/humanity/torso.png" id="4_vdj6j"]
@@ -17,6 +18,7 @@ script = ExtResource("1_c1skk")
 [node name="layouts" type="Node2D" parent="."]
 
 [node name="body" type="Sprite2D" parent="layouts"]
+script = ExtResource("2_3we25")
 
 [node name="Head" type="Sprite2D" parent="layouts/body"]
 position = Vector2(0, 1.19209e-07)

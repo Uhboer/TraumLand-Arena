@@ -14,10 +14,4 @@ func _physics_process(delta):
 	else:
 		velocity = Vector2(0, 0)
 #		anim.play("Idle")
-	if Input.is_action_just_pressed("A"):
-		body.flip_h = true
-	if Input.is_action_just_pressed("D"):
-		body.flip_h = false
-
-
 	move_and_slide()
